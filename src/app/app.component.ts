@@ -18,11 +18,16 @@ export class AppComponent implements OnInit {
   coupPied = 50;
   coupPoing = 50;
   myEvent(e) {
-    console.log('ta mere');
+    this.selectPlayer.life -= 20;
+  }
+  mySecondEvent(e) {
+
+    this.selectIa.life -= 20;
+  }
+  myThirdEvent(e) {
     this.selectPlayer.life -= 10;
   }
-  mySecondEvent(f) {
-    console.log('ta mere');
+  myFourthEvent(e) {
     this.selectIa.life -= 10;
   }
   getPerso(param) {
