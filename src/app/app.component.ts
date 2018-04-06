@@ -12,16 +12,39 @@ export class AppComponent implements OnInit {
   results = '';
   heroes;
   hero;
-  selectPlayer = null;
-  selectIa = null;
-  healthPlayer = 100;
-  healthIa = 100;
 
-  getPerso(param) {
-    this.selectPlayer = this.heroes[param];
-    console.log(this.selectPlayer);
-   // this.getIa();
+  constructor(private http: HttpClient) {
   }
+
+  // getPerso(param);
+
+  ngOnInit(): void {
+    this.http.get('https://akabab.github.io/superhero-api/api/all.json').subscribe(
+      heroes => {
+        console.log(heroes);
+        this.heroes = heroes;
+      });
+  }
+}
+
+
+
+  // selectPlayer = null;
+  // selectIa = null;
+  // healthPlayer = 100;
+  // healthIa = 100;
+
+
+
+
+
+
+
+ // getPerso(param) {
+  //   this.selectPlayer = this.heroes[param];
+  //   console.log(this.selectPlayer);
+   // this.getIa();
+
   // getIa() {
   //   const choice = Math.floor(Math.random() * 10);
   //   switch (choice) {
@@ -59,19 +82,8 @@ export class AppComponent implements OnInit {
   //   console.log(this.selectIa);
   // }
 
-  constructor(private http: HttpClient) {
-  }
 
-  getPerso(param)
 
-  ngOnInit(): void {
-    this.http.get('https://akabab.github.io/superhero-api/api/all.json').subscribe(
-      heroes => {
-        console.log(heroes);
-        this.heroes = heroes;
-      });
-  }
-}
 // <div *ngIf='selectPlayer; then game else selectMenu'>
 // </div>
 // <div class='container'>
