@@ -1,3 +1,11 @@
 li {
     list-style-type: none;
 } 
+.card {
+    margin-left:25px;
+}
+.nomperso {
+    text-align: justify;
+    
+    font-size: 20px
+}
