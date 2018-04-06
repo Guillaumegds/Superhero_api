@@ -6,18 +6,19 @@
 </div>
 
 
-<div class="row fighters">
-  <li *ngFor="let hero of heroes | slice:0:12 ;let i = index">
-  </li>
-</div>
+<!-- <div class="row fighters"> -->
+  <!-- <li *ngFor="let hero of heroes | slice:0:12 ;let i = index"> -->
+  <!-- maman -->
+  <!-- </li> -->
+<!-- </div> -->
 
 <div *ngIf='selectPlayer; then game else selectMenu'>
 </div>
 <div class="row play">
 </div>
 
-<img (click)='getPerso' src={{hero.images.sm}}>
-<p>{{hero.name}}</p>
+<!-- <img (click)='getPerso' src = {{hero.images.sm}}> -->
+<!-- <p>{{hero.name}}</p> -->
 <div class='container'>
   <ng-template #selectMenu>
     <div class='row'>
