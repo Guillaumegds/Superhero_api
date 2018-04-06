@@ -13,7 +13,7 @@
         
      <li *ngFor="let hero of heroes | slice:0:12 ; let i = index">
         
-        <img class="card" src= {{hero.images.sm}}>
+        <img (click)='getPerso(50)'class="card" src= {{hero.images.sm}}>
         <p class="nomperso">{{hero.name}}</p>
         
     </li>
