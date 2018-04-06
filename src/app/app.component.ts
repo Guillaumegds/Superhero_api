@@ -66,6 +66,7 @@ export class AppComponent implements OnInit {
         break;
     }
     console.log(this.selectIa);
+    this.selectIa.life = 100;
   }
   constructor(private http: HttpClient) {
   }
