@@ -21,51 +21,51 @@
 <div class='container'>
   <ng-template #selectMenu>
     <div class='row'>
-      <div class=' mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[123].name}}</p>
         <img (click)='getPerso(123)' src="{{heroes[123].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[257].name}}</p>
         <img (click)=' getPerso(257) ' src="{{heroes[257].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[08].name}}</p>
         <img (click)='getPerso(08)' src="{{heroes[08].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[12].name}}</p>
         <img (click)=' getPerso(12) ' src="{{heroes[12].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[32].name}}</p>
         <img (click)='getPerso(32)' src="{{heroes[32].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[19].name}}</p>
         <img (click)=' getPerso(19) ' src="{{heroes[19].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[231].name}}</p>
         <img (click)='getPerso(231)' src="{{heroes[231].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[56].name}}</p>
         <img (click)=' getPerso(56) ' src="{{heroes[56].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[50].name}}</p>
         <img (click)='getPerso(50)' src="{{heroes[50].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[217].name}}</p>
         <img (click)=' getPerso(217) ' src="{{heroes[217].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[2].name}}</p>
         <img (click)=' getPerso(2) ' src="{{heroes[2].images.sm}}" />
       </div>
-      <div class='mx-auto'>
+      <div class='col-md-2' *ngIf='heroes'>
         <p>{{heroes[21].name}}</p>
         <img (click)=' getPerso(21) ' src="{{heroes[21].images.sm}}" />
       </div>
@@ -73,17 +73,21 @@
   </ng-template>
 
   <ng-template #game>
-    <div class='row mx-auto'>
+    <div class='row'>
       <div class='offset-2 col-2'>
         <p>You</p>
         <img src='{{selectPlayer.images.sm}} ' />
-        <p>vie : /100</p>
+        <button>vie : {{selectIa.life}}</button>
+        <button (click)="myEvent($event)">Coup de pied</button>
+        <button (click)="myEvent($event)">Coup de poing</button>
       </div>
 
       <div class='offset-2 col-2'>
         <p>Your enemy</p>
         <img src='{{selectIa.images.sm}} ' />
-        <p>vie : /100</p>
+        <button>vie : {{selectPlayer.life}}</button>
+        <button (click)="mySecondEvent($event)">Coup de pied</button>
+        <button (click)="mySecondEvent($event)">Coup de poing</button>
       </div>
     </div>
   </ng-template>

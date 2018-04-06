@@ -15,9 +15,19 @@ export class AppComponent implements OnInit {
   selectIa = null;
   healthPlayer = 100;
   healthIa = 100;
-
+  coupPied = 50;
+  coupPoing = 50;
+  myEvent(e) {
+    console.log('ta mere');
+    this.selectPlayer.life -= 10;
+  }
+  mySecondEvent(f) {
+    console.log('ta mere');
+    this.selectIa.life -= 10;
+  }
   getPerso(param) {
     this.selectPlayer = this.heroes[param];
+    this.selectPlayer.life = 100;
     console.log(this.selectPlayer);
     this.getIa();
   }
@@ -67,3 +77,6 @@ export class AppComponent implements OnInit {
     });
   }
 }
+
+
+
