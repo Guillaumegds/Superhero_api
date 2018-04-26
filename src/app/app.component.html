@@ -1,72 +1,71 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
+
 <div style="text-align:center">
   <h1>
     Welcome to the Wild !
   </h1>
 </div>
 
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+  <source src="assets/xrp60.mp4" type="video/mp4">
+</video>
 
-<!-- <div class="row fighters"> -->
-  <!-- <li *ngFor="let hero of heroes | slice:0:12 ;let i = index"> -->
-  <!-- maman -->
-  <!-- </li> -->
-<!-- </div> -->
 
 <div *ngIf='selectPlayer; then game else selectMenu'>
 </div>
 <div class="row play">
 </div>
 
-<!-- <img (click)='getPerso' src = {{hero.images.sm}}> -->
-<!-- <p>{{hero.name}}</p> -->
 <div class='container'>
   <ng-template #selectMenu>
     <div class='row'>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[123].name}}</p>
         <img (click)='getPerso(123)' src="{{heroes[123].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[257].name}}</p>
         <img (click)=' getPerso(257) ' src="{{heroes[257].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[08].name}}</p>
         <img (click)='getPerso(08)' src="{{heroes[08].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[12].name}}</p>
         <img (click)=' getPerso(12) ' src="{{heroes[12].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[32].name}}</p>
         <img (click)='getPerso(32)' src="{{heroes[32].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[19].name}}</p>
         <img (click)=' getPerso(19) ' src="{{heroes[19].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[231].name}}</p>
         <img (click)='getPerso(231)' src="{{heroes[231].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[56].name}}</p>
         <img (click)=' getPerso(56) ' src="{{heroes[56].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[50].name}}</p>
         <img (click)='getPerso(50)' src="{{heroes[50].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[217].name}}</p>
         <img (click)=' getPerso(217) ' src="{{heroes[217].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[2].name}}</p>
         <img (click)=' getPerso(2) ' src="{{heroes[2].images.sm}}" />
       </div>
-      <div class='col-md-2' *ngIf='heroes'>
+      <div class='col-md-2 images' *ngIf='heroes'>
         <p>{{heroes[21].name}}</p>
         <img (click)=' getPerso(21) ' src="{{heroes[21].images.sm}}" />
       </div>
@@ -75,20 +74,24 @@
 
   <ng-template #game>
     <div class='row'>
-      <div class='offset-2 col-2'>
+      <div class='offset-2 col-2 imgplayer'>
         <p>You</p>
-        <img src='{{selectPlayer.images.sm}} ' />
-        <button>vie : {{selectIa.life}}</button>
-        <button (click)="myEvent($event)">Coup de pied</button>
-        <button (click)="myThirdEvent($event)">Coup de poing</button>
+        <img src='{{selectPlayer.images.md}} ' />
+        <div class="buttons">
+          <button type="button" class="btn btn-info btn-lg mx-auto mt-2">vie : {{selectIa.life}}</button>
+          <button type="button" class="btn btn-warning mx-auto mt-2" (click)="myEvent($event)">Coup de pied</button>
+          <button type="button" class="btn btn-warning mx-auto mt-2" (click)="myThirdEvent($event)">Coup de poing</button>
+        </div>
       </div>
 
-      <div class='offset-2 col-2'>
+      <div class='offset-2 col-2 imgplayer'>
         <p>Your enemy</p>
-        <img src='{{selectIa.images.sm}} ' />
-        <button>vie : {{selectPlayer.life}}</button>
-        <button (click)="mySecondEvent($event)">Coup de pied</button>
-        <button (click)="myFourthEvent($event)">Coup de poing</button>
+        <img src='{{selectIa.images.md}} ' />
+        <div class="buttons">
+          <button type="button" class="btn btn-info btn-lg mx-auto mt-2">vie : {{selectPlayer.life}}</button>
+          <button type="button" class="btn btn-warning mx-auto mt-2" (click)="mySecondEvent($event)">Coup de pied</button>
+          <button type="button" class="btn btn-warning mx-auto mt-2" (click)="myFourthEvent($event)">Coup de poing</button>
+        </div>
       </div>
     </div>
   </ng-template>

@@ -1,3 +1,43 @@
 li {
   list-style-type: none;
 }
+
+.images {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  color: red;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 60px;
+  margin-top: 30px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1000;
+}
+
+p {
+  color: red;
+  font-family: 'VT323', monospace;
+  font-size: 26px;
+}
+
+.imgplayer {
+  margin: 50px auto;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: space-around;
+  text-align: center;
+  margin-left: 30px;
+}
